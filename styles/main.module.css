@@ -110,6 +110,7 @@ input[value="deepdive"]:checked + .projects-deepdive {
     opacity: 0;
 
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
