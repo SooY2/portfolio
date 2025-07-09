@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="./styles/header.module.css">
     <link rel="stylesheet" href="./styles/main.module.css">
     <link rel="stylesheet" href="./styles/footer.module.css">
+    <link rel="stylesheet" href="./styles/education.module.css">
+    <link rel="stylesheet" href="./styles/project.module.css">
+    <link rel="stylesheet" href="./styles/strength.module.css">
+    <script defer src="./js/skills.js"></script>
+    <script defer src="./js/project.js"></script>
+    <script defer src="./js/portfolio.js"></script>
+    <script defer type="module" src="./js/educationActivity.js"></script>
+    <script defer  src="./js/strength.js"></script>
 </head>
 <body>
     <header class="header-container">
@@ -23,80 +31,92 @@
     </header>
 
     <main>
-        <section id="banner">
-            <h1>Sooyeon Shin</h1>
-            <p>안녕하세요:) 사용자 관점에서 고민하는 개발자 신수연입니다</p>
+        <!-- <section id="banner">
+            <h1>
+                <p>안녕하세요</p>
+                <p>사용자의 관점에서 고민하는</p> 
+                <P>프론트엔드 개발자 신수연입니다</p>
+            </h1>
+
+        </section> -->
+        <div id="strength-wrapper">
+            <section id="strength">
+                <div id="strength-texts">
+                    <div>
+                        <h1>
+                            <p>안녕하세요 😊 </p>
+                            <br/>
+                            <p style="font-size: 4.5rem; color: #000;">사용자의 관점에서 고민하는</p>
+                            <br/> 
+                            <P>프론트엔드 개발자 신수연입니다</p>
+                        </h1>
+                    </div>
+                    <div>
+                        <p data-index="0" class="strength-text">책임감</p>, 
+                        <p data-index="1" class="strength-text">문제해결능력</p>,
+                        <p data-index="2" class="strength-text">섬세함</p>으로
+                        <p><span style="font-size: 2rem;">더 나은 사용자 경험</span>을 추구합니다.
+                        </p>
+                    </div>
+                </div>
+                <div id="strength-icons">
+                <div class="icon" data-index="0">
+                    <!-- 책임감 아이콘 -->
+                    <img src="./assets/responsibilityIcon.png" alt="책임감" />
+                </div>
+                <div class="icon" data-index="1">
+                    <!-- 문제해결능력 아이콘 -->
+                    <img src="./assets/problemIcon.png" alt="문제해결능력" />
+                </div>
+                <div class="icon" data-index="2">
+                    <!-- 섬세함 아이콘 -->
+                    <img src="./assets/delicateIcon.png" alt="섬세함" />
+                </div>
+            </div>
         </section>
-        <section id="about">
+        <!-- 스크롤 트리거 -->
+        <div class="trigger-zone" data-index="0"></div>
+        <div class="trigger-zone" data-index="1"></div>
+        <div class="trigger-zone" data-index="2"></div>
+    </div>
+
+        <!-- <section id="about">
             <div>
                 <img src="https://avatars.githubusercontent.com/u/101343915" alt="Profile Picture" class="profile-image">
-                <h2>신수연</h2>
-                <p>숭실대학교 글로벌미디어학부 졸업</p>
             </div>
-            <div style="display: flex; gap: 1rem;">
-                <img alt="react" src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black">
-                <img alt="react-native" src="https://img.shields.io/badge/ReactNative-61DAFB?style=flat-square&logo=React&logoColor=black">
-                <img alt="typescript" src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=black">
-                <img alt="javascript" src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
-                <img alt="reactQuery" src="https://img.shields.io/badge/reactQuery-FF4154?style=flat-square&logo=reactQuery&logoColor=black">
+            
+        </section> -->
+        <section id="skills">
+            <h2 class="common-title">Skills</h2>
+            <div id="skills-box-container" style="flex:1; display: flex; gap: 1rem;">
+                <!-- skill box 들어올 자리 -->
             </div>
         </section>
-        <section id="projects">
-            <div class="projects-filter">
-                <label>
-                    <span class="projects-projects">projects</span>
-                    <input type="radio" name="showProject" value="projects" checked/>
-                    <div class="projects-projects projects-content">
-                        <div class="project-card-container">
-                            <h3 class="project-card-title">MOONSHOT</h3>
-                            <p class="project-card-period">2023.08 ~</p>
-                            <p class="project-card-subtitle">personal OKR 성과관리 솔루션, Moonshot</p>
-                            <p class="project-card-explain">
-                            ▪ okr대시보드 개발
-                            </p>
-                            <p class="project-card-explain">▪ okr목표 설정 및 관리 기능 개발</p>
-                            <a class="project-card-link" href="https://www.moonshotyou.com/about" target="_blank">🧷 https://www.moonshotyou.com</a>
-                            <div class="project-card-skills">React, Typescript, swr, emotion</div>
-                        </div>
-                        <div class="project-card-container">
-                            <h3 class="project-card-title">눈길</h3>
-                            <p class="project-card-period">2024.01 ~</p>
-                            <p class="project-card-subtitle">바쁜 현대 직장인들을 위한 커피챗 서비스</p>
-                            <p class="project-card-explain">
-                            ▪ 커널 구조를 활용한 회원가입 프로세스
-                            </p>
-                            <p class="project-card-explain">▪ 웹소켓을 활용한 실시간 채팅 서비스</p>
-                            <a class="project-card-link" href="" target="_blank"></a>
-                            <div class="project-card-skills">React, ReactNative, Typescript, emotion</div>
-                        </div>
-                        <div class="project-card-container">
-                            <h3 class="project-card-title">MOONSHOT</h3>
-                            <p class="project-card-period">2023.08 ~</p>
-                            <p class="project-card-subtitle">personal OKR 성과관리 솔루션, Moonshot</p>
-                            <p class="project-card-explain">
-                            ▪ okr대시보드 개발
-                            </p>
-                            <p class="project-card-explain">▪ okr목표 설정 및 관리 기능 개발</p>
-                            <a class="project-card-link" href="https://www.moonshotyou.com/about" target="_blank">🧷 https://www.moonshotyou.com</a>
-                            <div class="project-card-skills">React, Typescript, swr, emotion</div>
-                        </div>
-                    </div>
-                </label>
-                <label>
-                    <span class="projects-volunteering">Volunteering</span>
-                    <input type="radio" name="showProject" value="volunteering"/>
-                    <div class="projects-volunteering projects-content">봉사활동</div>
-                </label>
-                <label>
-                    <span class="projects-deepdive">Deep Dive</span>
-                    <input type="radio" name="showProject" value="deepdive"/>
-                    <div class="projects-deepdive projects-content">기술블로그</div>
-                </label>
+        <section id="portfolio">
+            <aside>
+                <ul>
+                    <li class='common-title' data-target="projects">Projects</li>
+                    <li class='common-title' data-target="education-activity">Education & Activity</li>
+                    <li class='common-title' data-target="career">Career</li>
+                </ul>
+
+            </aside>
+            <div>
+                <section id="projects">
+                    
+                </section> 
+                <section id="education-activity" style="height: 100rem;">
+                    <!-- 활동 및 교육 컴포넌트 -->
+                </section> 
+                <section id="career" style="height: 100rem;">
+                    경력
+                </section> 
+
             </div>
-
         </section>
+        
 
-        <section id="contact">
+        <section id="contact" >
             <h2>Contact</h2>
             <div>
                 <p>email | ssy67366736@gmail.com</p>
